@@ -166,11 +166,39 @@
             },
             {
               "kind": "field",
+              "name": "theme",
+              "type": {
+                "text": "PwaInstallTheme"
+              },
+              "default": "'system'",
+              "attribute": "theme",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "messages",
+              "type": {
+                "text": "Partial<PwaInstallMessages>"
+              },
+              "default": "{}",
+              "attribute": "messages"
+            },
+            {
+              "kind": "field",
               "name": "externalPromptEvent",
               "type": {
                 "text": "BeforeInstallPromptEvent | null"
               },
               "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "_compactSheet",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
             },
             {
               "kind": "field",
@@ -513,6 +541,22 @@
               },
               "default": "{}",
               "fieldName": "styles"
+            },
+            {
+              "name": "theme",
+              "type": {
+                "text": "PwaInstallTheme"
+              },
+              "default": "'system'",
+              "fieldName": "theme"
+            },
+            {
+              "name": "messages",
+              "type": {
+                "text": "Partial<PwaInstallMessages>"
+              },
+              "default": "{}",
+              "fieldName": "messages"
             }
           ],
           "superclass": {
@@ -546,6 +590,14 @@
           "declaration": {
             "name": "PWAInstallAttributes",
             "module": "src/index.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "PwaInstallMessages",
+          "declaration": {
+            "name": "PwaInstallMessages",
+            "module": "./messages"
           }
         },
         {

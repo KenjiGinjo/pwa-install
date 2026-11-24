@@ -1,4 +1,6 @@
 import { LitElement, PropertyValues } from 'lit';
+import type { PwaInstallMessages } from './messages';
+import type { PwaInstallTheme } from './templates/types';
 import type { IRelatedApp, PWAInstallAttributes } from './types/types.js';
 export declare class PWAInstallElement extends LitElement {
     manifestUrl: string;
@@ -19,8 +21,11 @@ export declare class PWAInstallElement extends LitElement {
     disableFallback: boolean;
     useLocalStorage: boolean;
     styles: Record<string, string>;
+    theme: PwaInstallTheme;
+    messages: Partial<PwaInstallMessages>;
     static get styles(): CSSStyleSheet[];
     externalPromptEvent: BeforeInstallPromptEvent | null;
+    private _compactSheet;
     platforms: BeforeInstallPromptEvent['platforms'];
     userChoiceResult: string;
     isDialogHidden: boolean;
@@ -41,6 +46,8 @@ export declare class PWAInstallElement extends LitElement {
     private _galleryRequested;
     private _linkCopied;
     private _installLogic;
+    private _compactSheetQuery;
+    private _onCompactSheet;
     install: () => Promise<void>;
     private _hideDialog;
     private _hideDialogUser;
@@ -59,7 +66,9 @@ export declare class PWAInstallElement extends LitElement {
     disconnectedCallback(): void;
     willUpdate(changedProperties: PropertyValues<this>): void;
     private _getTemplateOptions;
+    private _surfaceStyles;
     render(): import("lit-html").TemplateResult<1>;
 }
 export type { PWAInstallAttributes };
+export type { PwaInstallMessages } from './messages';
 export type { PWAInstallProps } from './types/jsx';

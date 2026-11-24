@@ -1,3 +1,4 @@
+import { type PwaInstallMessages } from '../../../messages';
 export interface BottomSheetTemplateOptions {
     name: string;
     description: string;
@@ -6,6 +7,7 @@ export interface BottomSheetTemplateOptions {
     fallback: boolean;
     howToRequested: boolean;
     inAppBrowser: boolean;
+    messages: Partial<PwaInstallMessages>;
 }
-declare const template: ({ name, description, icon, install, fallback, howToRequested, inAppBrowser }: BottomSheetTemplateOptions) => import("lit-html").TemplateResult<1>;
+declare const template: ({ name, description, icon, install, fallback, howToRequested, inAppBrowser, messages }: BottomSheetTemplateOptions) => import("lit-html").TemplateResult<1>;
 export default template;

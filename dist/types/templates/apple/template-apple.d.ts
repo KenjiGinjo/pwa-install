@@ -12,5 +12,5 @@ export interface AppleTemplateOptions extends InstallTemplateOptions {
     safariUrl: string;
     copyCurrentUrl: EventListenerOrEventListenerObject;
 }
-declare const template: ({ name, description, installDescription, disableDescription, disableScreenshots, disableClose, manualHowTo, icon, manifest, installAvailable, hideDialog, howToForApple, howToRequested, toggleGallery, galleryRequested, isRTL, isApple26Plus, isApple27Plus, isDesktop, inAppBrowser, customStyles, linkCopied, safariUrl, copyCurrentUrl }: AppleTemplateOptions) => import("lit-html").TemplateResult<1>;
+declare const template: ({ name, description, installDescription, disableDescription, disableScreenshots, disableClose, manualHowTo, icon, manifest, installAvailable, hideDialog, howToForApple, howToRequested, toggleGallery, galleryRequested, isRTL, isApple26Plus, isApple27Plus, isDesktop, inAppBrowser, customStyles, linkCopied, safariUrl, copyCurrentUrl, messages, scheme }: AppleTemplateOptions) => import("lit-html").TemplateResult<1>;
 export default template;

@@ -4,6 +4,8 @@ type IProps = {
     description: string;
     icon: string;
 };
+import type { PwaInstallMessages } from '../../../messages';
+import type { PwaInstallTheme } from '../../types';
 export default class PWABottomSheetElement extends LitElement {
     static get styles(): CSSStyleSheet[];
     props: IProps;
@@ -18,6 +20,8 @@ export default class PWABottomSheetElement extends LitElement {
     toggleHowTo: {
         handleEvent: () => void;
     };
+    messages: Partial<PwaInstallMessages>;
+    scheme: PwaInstallTheme;
     private _callInstall;
     private _callHide;
     private bindedElement;
